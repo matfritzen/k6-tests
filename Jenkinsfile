@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Performance Testing') {
             steps {
-                sh 'k6 version'
                 echo 'Installing k6'
                 sh 'sudo chmod +x setup_k6.sh'
                 sh 'sudo ./setup_k6.sh'
