@@ -1,0 +1,1 @@
+you can define the VUs, Duration, Interations... via CLI: k6 run test-file.js -vus 1 -duration 10s -iterations 1

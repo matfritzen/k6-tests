@@ -1,0 +1,7 @@
+1. Login on K6 by running the command: k6 login cloud --token personalTokenFromYourAccount
+
+2. To run a test and get the results on the K6 cloud platform: k6 cloud test-file.js
+
+3. Exporting the test result file from local to cloud: k6 run test-file.js -o cloud
+
+4. Specify the project ID from the k6 cloud platform, by using the ext object property as it is in the first-script.js file
