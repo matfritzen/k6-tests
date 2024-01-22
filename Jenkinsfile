@@ -4,7 +4,7 @@ pipeline {
         stage('k6 - Performance Testing') {
             agent {
                 docker {
-                    image 'grafana/k6'
+                    image 'grafana/xk6'
                     args '--entrypoint=""'
                 }
             }
