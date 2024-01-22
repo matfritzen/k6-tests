@@ -1,13 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Performance Testing') {
+        stage('k6 - Performance Testing') {
+            agent {
+                docker {
+                    image 'grafana/k6'
+                    args '--entrypoint=""'
+                }
+            }
             steps {
-                echo 'Installing k6'
-                sh 'sudo chmod +x setup_k6.sh'
-                sh 'sudo ./setup_k6.sh'
-                echo 'Running K6 performance tests...'
-                sh 'k6 run ./k6-scripts/first-script.js'
+                sh 'k6'
             }
         }
     }
