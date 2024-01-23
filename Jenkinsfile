@@ -11,7 +11,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'k6 run ./TypesOfTests/first-script.js'
+                // The --quiet parameter is to not show the updates by the VUs in the log execution, and show only the report
+                sh 'k6 run ./TypesOfTests/first-script.js --quiet'
             }
         }
     }
