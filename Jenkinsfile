@@ -1,5 +1,7 @@
 pipeline {
     agent any
+
+    // You need to start Docker in the machine before you run this file
     stages {
         stage('k6 - Performance Testing') {
             agent {
@@ -9,7 +11,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'k6'
+                sh 'k6 run ./TypesOfTests/first-script.js'
             }
         }
     }
