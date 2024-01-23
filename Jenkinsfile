@@ -1,6 +1,13 @@
 pipeline {
     agent any
-
+    // To setup environment variables you can use the environments keyword
+    /*
+    environment {
+        K6_CLOUD_TOKEN = credentials('k6_cloud_token')
+        K6_CLOUD_PROJECT_ID = 12312
+    }
+    */
+    
     // You need to start Docker in the machine before you run this file
     stages {
         stage('k6 - Performance Testing') {
